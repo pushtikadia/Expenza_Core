@@ -1,39 +1,65 @@
-# Expense Tracker CLI – Python
+# 💸 Expenza Core (Expense Tracker CLI)
 
-A robust, command-line based **Expense Tracker application** built using Python.  
-This project helps users record, manage, analyze, and back up their daily expenses with support for categories, budgets, reports, and CSV import/export.
+**Expenza Core** is a robust, production-grade command-line expense tracker built with **Python 3**. It is designed for reliability and data safety, featuring atomic file saving, budget alerts, and precise financial calculations.
 
-The application focuses on **data safety, accuracy, and real-world usability**.
+Unlike simple scripts, this tool focuses on **data integrity**, offering built-in backups, undo functionality, and CSV import/export capabilities.
+
+## 📂 Repository Content
+
+This project is contained within a powerful single-file application:
+
+* **`expense_tracker.py`:** The main executable script. It handles:
+    * **Data Persistence:** Stores records in `expenses.json` with **atomic saving** to prevent corruption during crashes.
+    * **Logic & Math:** Uses Python's `Decimal` class for high-precision monetary calculations (avoiding floating-point errors).
+    * **Interactive CLI:** A robust menu loop for managing transactions, budgets, and settings.
 
 ---
 
-## 🚀 Features
+## ✨ Key Features
 
-- Add, edit, delete, and search expenses
-- Categorize expenses dynamically
-- Monthly expense summaries
-- Detailed statistics (total, average, top categories)
-- Monthly budget setting with overspend alerts
-- Import and export expenses via CSV
-- Automatic data backup and restore
-- Undo last operation using backup
-- Safe atomic file saving to prevent data corruption
-- Supports multiple date formats
-- Accurate financial calculations using Decimal
-- Fully interactive CLI interface
+### 📊 Financial Management
+* **Smart Budgeting:** Set monthly budgets and receive immediate alerts if an expense pushes you over the limit.
+* **Deep Analytics:** View monthly summaries, calculate averages, and identify top spending categories.
+* **Category Management:** Dynamically add, remove, or reassign expense categories.
+
+### 🛡️ Data Safety & Power Tools
+* **Atomic Saves & Backups:** Prevents data loss by writing to a temporary file first. Includes automatic backup creation.
+* **Undo Capability:** Made a mistake? Instantly revert the last operation using the backup file.
+* **Import/Export:** Seamlessly migrate data using standard CSV files for integration with Excel or Google Sheets.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+* Python 3.6 or higher.
+
+### Usage
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/pushtikadia/Expenza-Core.git](https://github.com/pushtikadia/Expenza-Core.git)
+    ```
+2.  **Navigate to the directory:**
+    ```bash
+    cd Expenza-Core
+    ```
+3.  **Run the tracker:**
+    ```bash
+    python expense_tracker.py
+    ```
+4.  **Follow the menu:**
+    Type `add` to record an expense, `stats` for insights, or `help` to see all commands.
 
 ---
 
 ## 🛠️ Technologies Used
 
-- **Python 3**
-- Standard Python Libraries:
-  - `json` – persistent data storage
-  - `uuid` – unique expense IDs
-  - `csv` – import/export functionality
-  - `os`, `shutil` – file system operations
-  - `datetime` – date and time handling
-  - `decimal` – precise monetary calculations
-  - `traceback` – error handling and debugging
+* **Language:** Python 3
+* **Core Libraries:** `json`, `csv`, `decimal`, `datetime`, `shutil` (File Ops)
 
 ---
+
+<p align="center">
+  <b>Expenza Core</b> • Created by <a href="https://github.com/pushtikadia"><b>Pushti Kadia</b></a>
+</p>
